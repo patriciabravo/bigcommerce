@@ -209,7 +209,7 @@ class ZohoCRMService
                 
                 $zohoApiUrl = 'https://www.zohoapis.com/crm/bulk/v6/write';
                 $jobData = [
-                    "operation" => "insert",
+                    "operation" => "upsert",
                     "ignore_empty" => true,
                     "callBack" => [
                         "url" => "https://sandbox.zohoapis.com/crm/v2/functions/sa_bulk_write_callback/actions/execute?auth_type=apikey&zapikey=1003.cf4f41dc4abb4a1dc38d1486144923c5.ea4bbb3ba57cbc2357d018bf4f3dea28",
@@ -220,7 +220,8 @@ class ZohoCRMService
                             "type" => "data",
                             "module" => [
                                 "api_name" => "Products"
-                            ],                           
+                            ],
+                            "find_by" => "ITEM_No",                           
                             "file_id" => $fileId,
                             "field_mappings" => [
                                 [
