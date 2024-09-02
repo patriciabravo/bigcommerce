@@ -220,12 +220,36 @@ class ZohoCRMService
                             "type" => "data",
                             "module" => [
                                 "api_name" => "Products"
-                            ],
+                            ],                           
                             "file_id" => $fileId,
                             "field_mappings" => [
                                 [
-                                    "api_name" => "Product_Name",
+                                    "api_name" => "ITEM_No",
                                     "index" => 0
+                                ],
+                                [
+                                    "api_name" => "MFR_No",
+                                    "index" => 1
+                                ],
+                                [
+                                    "api_name" => "Unit_Of_Measure",
+                                    "index" => 2
+                                ],
+                                [
+                                    "api_name" => "Product_Name",
+                                    "index" => 3
+                                ],
+                                [
+                                    "api_name" => "Product_Description",
+                                    "index" => 5
+                                ],
+                                [
+                                    "api_name" => "Manufacturer_Name",
+                                    "index" => 6
+                                ],
+                                [
+                                    "api_name" => "bigcommerce_json",
+                                    "index" => 26
                                 ]
                             ]
                         ]
